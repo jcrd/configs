@@ -1,0 +1,29 @@
+[user]
+	name = James Reed
+	email = jcrd@tuta.io
+	signingkey = 8F79994F6B8378C1
+[commit]
+	gpgsign = true
+[credential]
+	helper = cache --timeout 1800
+[push]
+	default = current
+[alias]
+	a = add
+	b = branch
+	c = commit
+	d = diff
+	f = fetch
+	g = grep
+	l = log --graph --abbrev-commit --oneline
+	ll = log --graph --abbrev-commit --date=short
+	o = checkout
+	p = pull
+	r = remote -v
+	s = status -s
+	st = status
+	w = whatchanged
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://gitlab.com/"]
+	insteadOf = git@gitlab.com:

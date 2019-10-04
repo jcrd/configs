@@ -1,0 +1,29 @@
+#!/bin/sh
+
+link() {
+    ln -snfv "$PWD/$1" "$2"
+}
+
+cmd() {
+    command -v "$1" > /dev/null
+}
+
+if cmd bat; then
+    link bat ~/.config/bat
+fi
+
+if cmd compton; then
+    link compton.conf ~/.config/compton.conf
+fi
+
+if cmd git; then
+    link gitconfig ~/.gitconfig
+fi
+
+if cmd kitty; then
+    link kitty ~/.config/kitty
+fi
+
+if cmd ranger; then
+    link ranger ~/.config/ranger
+fi
