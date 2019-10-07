@@ -1,0 +1,11 @@
+[Unit]
+Description=Compton X compositor
+Documentation=man:compton(1)
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/compton
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

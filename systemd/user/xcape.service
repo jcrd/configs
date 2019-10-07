@@ -1,0 +1,10 @@
+[Unit]
+Description=xcape
+Documentation=man:xcape(1)
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/xcape -de 'Control_L=Escape'
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Set default cursor
+Documentation=man:xsetroot(1)
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xsetroot -cursor_name left_ptr
+
+[Install]
+WantedBy=graphical-session.target

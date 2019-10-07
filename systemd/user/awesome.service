@@ -1,0 +1,11 @@
+[Unit]
+Description=Awesome window manager
+Documentation=man:awesome(1) man:awesome-client(1)
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/awesome
+ExecStopPost=/usr/bin/sessionctl stop
+
+[Install]
+WantedBy=graphical-session.target

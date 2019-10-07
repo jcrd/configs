@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh Awesome window manager
+Requisite=awesome.service
+After=user-sleep.target
+
+[Service]
+ExecStart=/usr/bin/awesome-client 'require("globalhooks"):run("refresh")'
+
+[Install]
+WantedBy=user-sleep.target

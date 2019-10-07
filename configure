@@ -27,3 +27,12 @@ fi
 if cmd ranger; then
     link ranger ~/.config/ranger
 fi
+
+mkdir -p ~/.config/systemd/user
+for u in systemd/user/*; do
+    n="${u#systemd/user/}"
+    n="${n%%.*}"
+    if cmd "${n%%_*}"; then
+        link "$u" ~/.config/systemd/user
+    fi
+done
