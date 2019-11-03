@@ -1,7 +1,16 @@
 #!/bin/sh
 
 link() {
-    ln -snfv "$PWD/$1" "$2"
+    dest="$1"
+    shift
+    for f in "$@"; do
+        ln -snfv "$PWD/$f" "$dest"
+    done
+}
+
+link_dir() {
+    mkdir -p "$1"
+    link "$@"
 }
 
 cmd() {
@@ -9,23 +18,23 @@ cmd() {
 }
 
 if cmd bat; then
-    link bat ~/.config/bat
+    link_dir ~/.config/bat bat/*
 fi
 
 if cmd compton; then
-    link compton.conf ~/.config/compton.conf
+    link ~/.config/compton.conf compton.conf
 fi
 
 if cmd git; then
-    link gitconfig ~/.gitconfig
+    link ~/.gitconfig gitconfig
 fi
 
 if cmd kitty; then
-    link kitty ~/.config/kitty
+    link_dir ~/.config/kitty kitty/*
 fi
 
 if cmd ranger; then
-    link ranger ~/.config/ranger
+    link_dir ~/.config/ranger ranger/*
 fi
 
 mkdir -p ~/.config/systemd/user
@@ -33,6 +42,6 @@ for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
     if cmd "${n%%_*}"; then
-        link "$u" ~/.config/systemd/user
+        link ~/.config/systemd/user "$u"
     fi
 done
