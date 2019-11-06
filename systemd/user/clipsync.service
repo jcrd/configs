@@ -3,7 +3,7 @@ Description=clipsync
 PartOf=graphical-session.target
 
 [Service]
-ExecStart=/usr/local/bin/clipsync
+ExecStart=/usr/bin/clipsync
 Restart=on-failure
 
 [Install]
