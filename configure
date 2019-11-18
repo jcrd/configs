@@ -21,8 +21,8 @@ if cmd bat; then
     link_dir ~/.config/bat bat/*
 fi
 
-if cmd compton; then
-    link ~/.config/compton.conf compton.conf
+if cmd picom; then
+    link ~/.config/picom.conf picom.conf
 fi
 
 if cmd git; then
