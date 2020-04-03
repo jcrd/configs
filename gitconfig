@@ -1,7 +1,7 @@
 [user]
 	name = James Reed
 	email = jcrd@tuta.io
-	signingkey = 8F79994F6B8378C1
+	signingkey = C5E8125E
 [commit]
 	gpgsign = true
 [credential]
