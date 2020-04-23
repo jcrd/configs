@@ -1,6 +1,8 @@
 [Unit]
 Description=Awesome window manager
 Documentation=man:awesome(1) man:awesome-client(1)
+Wants=pulseaudio.service
+After=pulseaudio.service
 PartOf=graphical-session.target
 
 [Service]
