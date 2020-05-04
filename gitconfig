@@ -23,7 +23,5 @@
 	s = status -s
 	st = status
 	w = whatchanged
-[url "https://github.com/"]
-	insteadOf = git@github.com:
 [url "https://gitlab.com/"]
 	insteadOf = git@gitlab.com:
