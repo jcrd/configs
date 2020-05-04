@@ -43,5 +43,6 @@ for u in systemd/user/*; do
     n="${n%%.*}"
     if cmd "${n%%_*}"; then
         link ~/.config/systemd/user "$u"
+        systemctl --user enable "$n"
     fi
 done
