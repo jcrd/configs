@@ -17,6 +17,8 @@ cmd() {
     command -v "$1" > /dev/null
 }
 
+mkdir -p ~/.config/systemd/user
+
 if cmd bat; then
     link_dir ~/.config/bat bat/*
 fi
@@ -37,7 +39,6 @@ if cmd ranger; then
     link_dir ~/.config/ranger ranger/*
 fi
 
-mkdir -p ~/.config/systemd/user
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
