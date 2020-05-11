@@ -39,6 +39,11 @@ if cmd ranger; then
     link_dir ~/.config/ranger ranger/*
 fi
 
+if cmd gpg-agent; then
+    mkdir -p ~/.gnupg
+    link ~/.gnupg/gpg-agent.conf gpg-agent.conf
+fi
+
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
