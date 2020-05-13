@@ -39,6 +39,10 @@ if cmd ranger; then
     link_dir ~/.config/ranger ranger/*
 fi
 
+if cmd podman; then
+    link_dir ~/.config/containers containers/*
+fi
+
 if cmd gpg-agent; then
     mkdir -p ~/.gnupg
     link ~/.gnupg/gpg-agent.conf gpg-agent.conf
