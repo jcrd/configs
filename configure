@@ -43,6 +43,10 @@ if cmd podman; then
     link_dir ~/.config/containers containers/*
 fi
 
+if cmd ssh; then
+    link_dir ~/.ssh ssh/*
+fi
+
 if cmd gpg-agent; then
     mkdir -p ~/.gnupg
     link ~/.gnupg/gpg-agent.conf gpg-agent.conf
