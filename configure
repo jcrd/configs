@@ -52,6 +52,10 @@ if cmd gpg-agent; then
     link ~/.gnupg/gpg-agent.conf gpg-agent.conf
 fi
 
+if cmd rofi; then
+    link_dir ~/.config/rofi rofi/*
+fi
+
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
