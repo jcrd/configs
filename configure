@@ -44,6 +44,7 @@ if cmd podman; then
 fi
 
 if cmd ssh; then
+    chmod 600 ssh/config
     link_dir ~/.ssh ssh/*
 fi
 
