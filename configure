@@ -1,9 +1,5 @@
 #!/bin/sh
 
-chassis() {
-    hostnamectl | awk '$1 == "Chassis:" {print $2}'
-}
-
 link() {
     dest="$1"
     shift
@@ -62,7 +58,7 @@ fi
 
 if cmd sessiond; then
     mkdir -p ~/.config/sessiond
-    link ~/.config/sessiond/sessiond.conf sessiond/sessiond-"$(chassis)".conf
+    link ~/.config/sessiond/sessiond.conf sessiond/sessiond-"$CHASSIS".conf
 fi
 
 for u in systemd/user/*; do
