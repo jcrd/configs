@@ -64,6 +64,10 @@ if cmd sessiond; then
         systemd/user/sessiond.service.d
 fi
 
+if cmd qutebrowser; then
+    link_dir ~/.config/qutebrowser qutebrowser/*
+fi
+
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
