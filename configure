@@ -50,6 +50,7 @@ fi
 
 if cmd gpg-agent; then
     mkdir -p ~/.gnupg
+    chmod 700 ~/.gnupg
     link ~/.gnupg/gpg-agent.conf gpg-agent.conf
 fi
 
