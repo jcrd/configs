@@ -69,6 +69,10 @@ if cmd qutebrowser; then
     link_dir ~/.config/qutebrowser qutebrowser/*
 fi
 
+if cmd tmux; then
+    link ~/.tmux.conf tmux.conf
+fi
+
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
