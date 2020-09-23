@@ -11,4 +11,4 @@ settings:
   content.notifications:
     https://www.reddit.com: false
   tabs.last_close:
-    global: close
+    global: blank
