@@ -73,6 +73,10 @@ if cmd tmux; then
     link ~/.tmux.conf tmux.conf
 fi
 
+if cmd mpv; then
+    link_dir ~/.config/mpv mpv/*
+fi
+
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
