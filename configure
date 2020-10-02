@@ -80,7 +80,7 @@ fi
 for u in systemd/user/*; do
     n="${u#systemd/user/}"
     n="${n%%.*}"
-    if cmd "${n%%_*}"; then
+    if cmd "$n"; then
         link ~/.config/systemd/user "$u"
         systemctl --user enable "$n"
     fi
