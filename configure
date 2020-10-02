@@ -13,6 +13,14 @@ link_dir() {
     link "$@"
 }
 
+link_unit() {
+    n="${2%%.*}"
+    if cmd "$n"; then
+        link ~/.config/systemd/user "$1"
+        systemctl --user enable "$n"
+    fi
+}
+
 cmd() {
     command -v "$1" > /dev/null
 }
@@ -78,10 +86,11 @@ if cmd mpv; then
 fi
 
 for u in systemd/user/*; do
-    n="${u#systemd/user/}"
-    n="${n%%.*}"
-    if cmd "$n"; then
-        link ~/.config/systemd/user "$u"
-        systemctl --user enable "$n"
-    fi
+    link_unit "$u" "${u#systemd/user/}"
 done
+
+if [ "$CHASSIS" == 'desktop' ]; then
+    for u in systemd/desktop/*; do
+        link_unit "$u" "${u#systemd/desktop/}"
+    done
+fi
