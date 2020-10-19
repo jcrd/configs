@@ -5,7 +5,6 @@ PartOf=graphical-session.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144
-RemainAfterExit=yes
 
 [Install]
 WantedBy=graphical-session.target
