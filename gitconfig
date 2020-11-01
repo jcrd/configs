@@ -25,3 +25,5 @@
 	w = whatchanged
 [url "https://gitlab.com/"]
 	insteadOf = git@gitlab.com:
+[pull]
+	rebase = false
