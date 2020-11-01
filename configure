@@ -73,6 +73,10 @@ if cmd sessiond; then
         systemd/user/sessiond.service.d
 fi
 
+if cmd dovetail; then
+    link_dir ~/.config/dovetail dovetail/*
+fi
+
 if cmd qutebrowser; then
     link_dir ~/.config/qutebrowser qutebrowser/*
 fi
