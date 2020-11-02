@@ -66,13 +66,6 @@ if cmd rofi; then
     link_dir ~/.config/rofi rofi/*
 fi
 
-if cmd sessiond; then
-    mkdir -p ~/.config/sessiond
-    link ~/.config/sessiond/sessiond.conf sessiond/sessiond-"$CHASSIS".conf
-    link ~/.config/systemd/user/sessiond.service.d \
-        systemd/user/sessiond.service.d
-fi
-
 if cmd dovetail; then
     link_dir ~/.config/dovetail dovetail/*
 fi
