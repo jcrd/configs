@@ -72,6 +72,7 @@ workspace_clients(clients)
 keys {
     -- Menu.
     ['M-p'] = cmd.menu.run,
+    ['M-S-p'] = cmd.menu.run_workspace,
     ['M-w'] = cmd.menu.new_workspace,
     ['M-r'] = cmd.menu.rename_workspace,
     ['M-l'] = {cmd.spawn, 'passless-rofi'},
