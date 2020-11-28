@@ -6,7 +6,7 @@ local colors = {
 }
 
 theme {
-    font_name = 'monospace',
+    font_name = 'Liberation Mono',
     font_size = 12,
     bar_growth = 4,
     info_margins = 10,
