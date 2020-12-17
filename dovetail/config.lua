@@ -150,3 +150,5 @@ rules {
         inhibit = true,
     },
 }
+
+include('chassis.lua')

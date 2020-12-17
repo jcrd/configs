@@ -67,7 +67,9 @@ if cmd rofi; then
 fi
 
 if cmd dovetail; then
-    link_dir ~/.config/dovetail dovetail/*
+    mkdir -p ~/.config/dovetail
+    link ~/.config/dovetail/config.lua dovetail/config.lua
+    link ~/.config/dovetail/chassis.lua dovetail/"$CHASSIS".lua
 fi
 
 if cmd qutebrowser; then
