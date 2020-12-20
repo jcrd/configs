@@ -56,6 +56,7 @@ local clients = {
     chromium = {
         cmd = 'chromium-freeworld',
         factory = 'chromium',
+        rule = {class = 'Chromium-freeworld'},
     },
     terminal = {
         cmd = 'kitty',
