@@ -133,6 +133,7 @@ client_keys {
     ['M-S-d'] = cmd.client.close,
     ['M-space'] = cmd.client.toggle_floating,
     ['M-g'] = cmd.client.toggle_fullscreen,
+    ['M-n'] = cmd.client.normalize,
 }
 
 buttons {
