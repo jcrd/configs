@@ -58,9 +58,14 @@ local clients = {
         factory = 'chromium',
         rule = {class = 'Chromium-freeworld'},
     },
-    terminal = {
+    master_term = {
         cmd = 'kitty',
+        id = 'master_term',
         set_master = true,
+    },
+    stack_term = {
+        cmd = 'kitty',
+        id = 'stack_term',
     },
     panel = {
         cmd = 'kitty',
@@ -80,7 +85,8 @@ keys {
     ['M-l'] = {cmd.spawn, 'passless-rofi'},
 
     -- Launch clients.
-    ['M-Return'] = {cmd.launch, clients.terminal},
+    ['M-Return'] = {cmd.launch, clients.master_term},
+    ['M-backslash'] = {cmd.launch, clients.stack_term},
     ['M-b'] = {cmd.launch, clients.browser},
     ['M-c'] = {cmd.launch, clients.chromium},
     ['M-grave'] = {cmd.workspace.toggle_panel, clients.panel},
