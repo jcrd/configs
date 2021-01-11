@@ -76,6 +76,13 @@ local clients = {
 
 workspace_clients(clients)
 
+local workspaces = {
+    edit = {
+        name = 'edit',
+        clients = { 'kitty -e nvim' },
+    },
+}
+
 keys {
     -- Menu.
     ['M-p'] = cmd.menu.run,
@@ -83,6 +90,7 @@ keys {
     ['M-w'] = cmd.menu.new_workspace,
     ['M-r'] = cmd.menu.rename_workspace,
     ['M-l'] = {cmd.spawn, 'passless-rofi'},
+    ['M-e'] = {cmd.workspace.new, workspaces.edit},
 
     -- Launch clients.
     ['M-Return'] = {cmd.launch, clients.master_term},
