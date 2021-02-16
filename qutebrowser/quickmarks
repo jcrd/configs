@@ -2,3 +2,4 @@ g https://github.com/
 r https://copr.fedorainfracloud.org/coprs/jcrd/
 c https://app.circleci.com/pipelines/github/jcrd
 d https://hub.docker.com/
+md http://localhost:6419/
