@@ -36,11 +36,7 @@ theme {
 }
 
 options {
-    default_workspace_name = 'main',
-    new_workspace_name = 'scratch',
     workspace_search_paths = {'~/code', '~/projects'},
-    brightness_step = 10,
-    hide_mouse_on_startup = true,
 }
 
 notifications {
