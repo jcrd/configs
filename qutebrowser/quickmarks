@@ -2,3 +2,4 @@ g https://github.com/
 r https://copr.fedorainfracloud.org/coprs/jcrd/
 d https://hub.docker.com/
 md http://localhost:6419/
+hg http://localhost:1313/
