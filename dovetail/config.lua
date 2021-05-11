@@ -48,6 +48,13 @@ local clients = {
     browser = {
         cmd = 'qutebrowser --target window',
         factory = 'qutebrowser',
+        id = 'stack_browser',
+    },
+    master_browser = {
+        cmd = 'qutebrowser --target window',
+        factory = 'qutebrowser',
+        id = 'master_browser',
+        set_master = true,
     },
     chromium = {
         cmd = 'chromium-freeworld',
@@ -92,6 +99,7 @@ keys {
     ['M-Return'] = {cmd.launch, clients.master_term},
     ['M-backslash'] = {cmd.launch, clients.stack_term},
     ['M-b'] = {cmd.launch, clients.browser},
+    ['M-S-b'] = {cmd.launch, clients.master_browser},
     ['M-c'] = {cmd.launch, clients.chromium},
     ['M-grave'] = {cmd.workspace.toggle_panel, clients.panel},
 
