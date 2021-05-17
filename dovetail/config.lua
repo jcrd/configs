@@ -133,6 +133,7 @@ keys {
 
     -- Screenshot.
     ['Print'] = cmd.screenshot.take,
+    ['S-Print'] = cmd.screenshot.take_region,
 
     -- Window manager.
     ['M-C-r'] = cmd.wm.restart,
