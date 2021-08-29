@@ -98,3 +98,5 @@ if [ "$CHASSIS" == 'desktop' ]; then
         link_unit "$u" "${u#systemd/desktop/}"
     done
 fi
+
+link_unit systemd/user/geoclue-agent.service redshift
