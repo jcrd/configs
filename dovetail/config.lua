@@ -131,6 +131,11 @@ keys {
     ['XF86AudioRaiseVolume'] = {cmd.audio.adjust, 2},
     ['XF86AudioMute'] = cmd.audio.toggle,
 
+    -- Pomodoro.
+    ['M-t'] = cmd.pomodoro.toggle,
+    ['M-S-t'] = cmd.pomodoro.stop,
+    ['M-S-r'] = cmd.pomodoro.restart,
+
     -- Screenshot.
     ['Print'] = cmd.screenshot.take,
     ['S-Print'] = cmd.screenshot.take_region,
