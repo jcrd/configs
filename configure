@@ -44,6 +44,10 @@ if cmd git; then
     link ~/.gitconfig gitconfig
 fi
 
+if cmd task; then
+    link ~/.taskrc taskrc
+fi
+
 if cmd kitty; then
     link_dir ~/.config/kitty kitty/*
 fi
