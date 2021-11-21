@@ -75,6 +75,11 @@ local clients = {
         id = 'panel_terminal',
         scale = 0.6,
     },
+    taskwiki = {
+        cmd = 'kitty zsh -c "exec nvim ~/tasks/index.md"',
+        id = 'panel_taskwiki',
+        scale = 0.6,
+    },
 }
 
 workspace_clients(clients)
@@ -102,6 +107,7 @@ keys {
     ['M-S-b'] = {cmd.launch, clients.master_browser},
     ['M-c'] = {cmd.launch, clients.chromium},
     ['M-grave'] = {cmd.workspace.toggle_panel, clients.panel},
+    ['M-slash'] = {cmd.workspace.toggle_panel, clients.taskwiki},
 
     -- Workspaces.
     ['M-Tab'] = cmd.workspace.restore,
