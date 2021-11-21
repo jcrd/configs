@@ -93,6 +93,10 @@ if cmd mpv; then
     link_dir ~/.config/mpv mpv/*
 fi
 
+if cmd redshift; then
+    link ~/.config/redshift.conf redshift.conf
+fi
+
 for u in systemd/user/*; do
     link_unit "$u" "${u#systemd/user/}"
 done
