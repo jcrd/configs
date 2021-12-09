@@ -10,5 +10,9 @@ settings:
     global: false
   content.notifications.enabled:
     https://www.reddit.com: false
+  fonts.default_size:
+    global: 11pt
   tabs.last_close:
     global: blank
+  zoom.default:
+    global: 175%

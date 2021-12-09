@@ -7,7 +7,7 @@ local colors = {
 
 theme {
     font_name = 'Fira Code',
-    font_size = 12,
+    font_size = 13,
     bar_growth = 4,
     info_margins = 10,
 
@@ -16,7 +16,7 @@ theme {
     useless_gap = 2,
     gap_single_client = false,
 
-    border_width = 2,
+    border_width = 3,
     notification_border_width = 1,
 
     fg_normal = colors.fg,
