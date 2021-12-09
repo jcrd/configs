@@ -122,9 +122,10 @@ keys {
     -- Clients.
     ['M-j'] = cmd.client.focus.next,
     ['M-k'] = cmd.client.focus.prev,
-    ['M-f'] = cmd.client.focus.other,
-    ['M-S-f'] = cmd.client.focus.other_layer,
+    ['M-s'] = cmd.client.focus.other,
+    ['M-S-s'] = cmd.client.focus.other_layer,
     ['M-o'] = cmd.client.toggle_max,
+    ['M-f'] = cmd.client.toggle_focal,
     ['M-S-x'] = cmd.client.unminimize,
 
     -- Session.
@@ -163,7 +164,7 @@ keys {
 }
 
 client_keys {
-    ['M-s'] = cmd.client.set_master,
+    ['M-a'] = cmd.client.set_master,
     ['M-S-d'] = cmd.client.close,
     ['M-space'] = cmd.client.toggle_floating,
     ['M-g'] = cmd.client.toggle_fullscreen,
