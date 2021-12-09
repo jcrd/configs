@@ -8,7 +8,7 @@ config_version: 2
 settings:
   auto_save.session:
     global: false
-  content.notifications:
+  content.notifications.enabled:
     https://www.reddit.com: false
   tabs.last_close:
     global: blank
