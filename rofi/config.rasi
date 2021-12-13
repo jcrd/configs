@@ -1,4 +1,5 @@
 configuration {
-	theme: "Paper";
 	dpi: 0;
 }
+
+@theme "Paper"
