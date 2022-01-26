@@ -116,8 +116,8 @@ keys {
     ['M-<numrow>'] = cmd.workspace.view,
     ['M-S-<numrow>'] = cmd.client.follow_to_workspace,
     ['M-C-<numrow>'] = cmd.client.move_to_workspace,
-    ['M-period'] = {cmd.workspace.adjust_master_width, 0.1},
-    ['M-comma'] = {cmd.workspace.adjust_master_width, -0.1},
+    ['M-period'] = {cmd.workspace.adjust_width, 0.1},
+    ['M-comma'] = {cmd.workspace.adjust_width, -0.1},
 
     -- Clients.
     ['M-j'] = cmd.client.focus.next,
@@ -134,9 +134,9 @@ keys {
     ['M-Down'] = cmd.session.brightness.dec,
 
     -- Audio.
-    ['XF86AudioLowerVolume'] = {cmd.audio.adjust, -2},
-    ['XF86AudioRaiseVolume'] = {cmd.audio.adjust, 2},
-    ['XF86AudioMute'] = cmd.audio.toggle,
+    ['XF86AudioLowerVolume'] = cmd.audio.volume.dec,
+    ['XF86AudioRaiseVolume'] = cmd.audio.volume.inc,
+    ['XF86AudioMute'] = cmd.audio.mute.toggle,
 
     -- Pomodoro.
     ['M-t'] = cmd.pomodoro.toggle,
