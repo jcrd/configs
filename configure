@@ -98,6 +98,11 @@ if cmd redshift; then
     link ~/.config/redshift.conf redshift.conf
 fi
 
+if cmd lvim; then
+    mkdir -p ~/.config/lvim
+    link ~/.config/lvim/config.lua lvim/config.lua
+fi
+
 for u in systemd/user/*; do
     link_unit "$u" "${u#systemd/user/}"
 done

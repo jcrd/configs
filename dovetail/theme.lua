@@ -1,12 +1,12 @@
 local colors = {
-    fg = '#444444',
+    fg = '#6a6a6a',
     bg = '#fafafa',
-    bg_alt = "#bcbcbc",
-    focus = '#005f87',
+    bg_alt = '#bebebe',
+    focus = '#118dc3',
 }
 
 theme {
-    font_name = 'Fira Code',
+    font_name = 'Hack',
     font_size = 13,
     bar_growth = 4,
     info_margins = 10,

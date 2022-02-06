@@ -1,4 +1,4 @@
-local editor = 'nvim'
+local editor = 'lvim'
 
 include('theme.lua')
 
