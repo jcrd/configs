@@ -78,6 +78,7 @@ fi
 if cmd dovetail; then
     mkdir -p ~/.config/dovetail
     link ~/.config/dovetail/config.lua dovetail/config.lua
+    link ~/.config/dovetail/theme.lua dovetail/theme.lua
     link ~/.config/dovetail/chassis.lua dovetail/"$CHASSIS".lua
 fi
 
