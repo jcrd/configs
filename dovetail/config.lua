@@ -1,3 +1,5 @@
+local editor = 'nvim'
+
 local colors = {
     fg = '#444444',
     bg = '#fafafa',
@@ -76,7 +78,7 @@ local clients = {
         scale = 0.6,
     },
     taskwiki = {
-        cmd = 'kitty zsh -c "exec nvim ~/tasks/index.md"',
+        cmd = format('kitty zsh -c "exec %s ~/tasks/index.md"', editor),
         id = 'panel_taskwiki',
         scale = 0.6,
     },
@@ -87,7 +89,7 @@ workspace_clients(clients)
 local workspaces = {
     edit = {
         name = 'edit',
-        clients = { 'kitty -e nvim' },
+        clients = { format('kitty -e %s', editor) },
     },
 }
 
