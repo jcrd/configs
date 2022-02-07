@@ -53,4 +53,23 @@ lvim.plugins = {
     {"olimorris/onedarkpro.nvim"},
     {"norcalli/nvim-colorizer.lua"},
     {"simnalamburt/vim-mundo"},
+    {
+        "tools-life/taskwiki",
+        requires = {
+            {
+                "vimwiki/vimwiki",
+                branch = "dev",
+            },
+        },
+    }
 }
+
+-- plugin options
+vim.g.vimwiki_list = {
+    {
+        path = "~/tasks/",
+        syntax = "markdown",
+        ext = ".md",
+    },
+}
+vim.g.vimwiki_global_ext = 0
