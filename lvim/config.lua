@@ -14,6 +14,7 @@ lvim.colorscheme = "onedarkpro"
 -- keymappings [view defaults by pressing <leader>Lk]
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<Leader>u"] = ":MundoToggle<cr>"
 
 -- options
 vim.opt.shiftwidth = 4
@@ -51,4 +52,5 @@ lvim.builtin.which_key.mappings["d"] = {
 lvim.plugins = {
     {"olimorris/onedarkpro.nvim"},
     {"norcalli/nvim-colorizer.lua"},
+    {"simnalamburt/vim-mundo"},
 }
