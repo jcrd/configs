@@ -42,7 +42,13 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
+lvim.builtin.which_key.mappings["d"] = {
+    name = "Display",
+    c = {"<cmd>ColorizerToggle<cr>", "Colors"}
+}
+
 -- plugins
 lvim.plugins = {
     {"olimorris/onedarkpro.nvim"},
+    {"norcalli/nvim-colorizer.lua"},
 }
