@@ -56,6 +56,7 @@ lvim.plugins = {
     {"norcalli/nvim-colorizer.lua"},
     {"simnalamburt/vim-mundo"},
     {"farmergreg/vim-lastplace"},
+    {"tpope/vim-surround"},
     {
         "tools-life/taskwiki",
         requires = {
