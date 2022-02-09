@@ -16,6 +16,8 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<Leader>u"] = ":MundoToggle<cr>"
 
+vim.api.nvim_set_keymap('n', '<C-l>', 'zz', { noremap = true, silent = true })
+
 -- options
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
