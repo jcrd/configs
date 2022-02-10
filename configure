@@ -99,8 +99,7 @@ if cmd redshift; then
 fi
 
 if cmd lvim; then
-    mkdir -p ~/.config/lvim
-    link ~/.config/lvim/config.lua lvim/config.lua
+    link_dir ~/.config/lvim lvim/*
 fi
 
 for u in systemd/user/*; do
