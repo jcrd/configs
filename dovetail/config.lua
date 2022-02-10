@@ -64,6 +64,7 @@ keys {
     ['M-S-p'] = cmd.menu.run_workspace,
     ['M-w'] = cmd.menu.new_workspace,
     ['M-r'] = cmd.menu.rename_workspace,
+    ['M-n'] = cmd.menu.capture_task,
     ['M-l'] = {cmd.spawn, 'passless-rofi'},
     ['M-e'] = {cmd.workspace.new, workspaces.edit},
 
