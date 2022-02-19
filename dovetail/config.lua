@@ -92,6 +92,9 @@ keys {
     ['M-k'] = cmd.client.focus.prev,
     ['M-s'] = cmd.client.focus.other,
     ['M-S-s'] = cmd.client.focus.other_layer,
+    ['M-a'] = cmd.client.master.promote,
+    ['M-d'] = cmd.client.master.demote,
+    ['M-q'] = cmd.client.master.cycle,
     ['M-o'] = cmd.client.toggle_max,
     ['M-f'] = cmd.client.toggle_focal,
     ['M-S-x'] = cmd.client.unminimize,
@@ -125,14 +128,13 @@ keys {
 
     -- Misc.
     ['M-m'] = cmd.mouse.hide,
-    ['M-d'] = cmd.notification.destroy_all,
+    ['M-v'] = cmd.notification.destroy_all,
 
     -- Util.
     ['M-i'] = cmd.util.clientinfo,
 }
 
 client_keys {
-    ['M-a'] = cmd.client.set_master,
     ['M-S-d'] = cmd.client.close,
     ['M-space'] = cmd.client.toggle_floating,
     ['M-g'] = cmd.client.toggle_fullscreen,
