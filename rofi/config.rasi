@@ -2,4 +2,4 @@ configuration {
 	dpi: 0;
 }
 
-@theme "Arc"
+@theme "Paper"
