@@ -27,3 +27,5 @@
 	insteadOf = git@gitlab.com:
 [pull]
 	rebase = false
+[core]
+	editor = code -w
