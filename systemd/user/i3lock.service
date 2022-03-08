@@ -4,7 +4,7 @@ Documentation=man:i3lock(1)
 PartOf=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/i3lock -n -c 005F87
+ExecStart=/usr/bin/i3lock -n -c 005faf
 ExecStopPost=/usr/bin/sessionctl unlock
 
 [Install]
