@@ -42,6 +42,7 @@ fi
 
 if cmd git; then
     link ~/.gitconfig gitconfig
+    link ~/.gitignore gitignore
 fi
 
 if cmd task; then
