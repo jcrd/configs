@@ -57,10 +57,6 @@ if cmd ranger; then
     link_dir ~/.config/ranger ranger/*
 fi
 
-if cmd podman; then
-    link_dir ~/.config/containers containers/*
-fi
-
 if cmd ssh; then
     chmod 600 ssh/config
     link_dir ~/.ssh ssh/*
