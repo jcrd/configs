@@ -3,3 +3,6 @@
 # python
 .venv
 __pycache__
+
+# npm
+node_modules
