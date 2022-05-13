@@ -1,5 +1,8 @@
 .env
 
+# vscode
+.vscode
+
 # python
 .venv
 __pycache__
