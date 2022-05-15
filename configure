@@ -41,8 +41,10 @@ if cmd picom; then
 fi
 
 if cmd git; then
-    link ~/.gitconfig gitconfig
-    link ~/.gitignore gitignore
+    link ~/.gitconfig git/gitconfig
+    link ~/.gitignore git/gitignore
+    mkdir -p ~/.local/bin
+    link ~/.local/bin/git-ship git/git-ship
 fi
 
 if cmd task; then

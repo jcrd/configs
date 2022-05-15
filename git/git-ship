@@ -1,0 +1,7 @@
+#!/bin/sh
+
+prod=${GIT_SHIP_PROD:-master}
+dev=${GIT_SHIP_DEV:-devel}
+remote=${GIT_SHIP_REMOTE:-origin}
+
+git merge --into-name $prod $dev && git push $remote $prod

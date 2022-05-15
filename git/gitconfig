@@ -23,6 +23,7 @@
 	s = status -s
 	st = status
 	w = whatchanged
+	ship = !git-ship
 [url "https://gitlab.com/"]
 	insteadOf = git@gitlab.com:
 [pull]
