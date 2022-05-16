@@ -13,14 +13,6 @@ link_dir() {
     link "$@"
 }
 
-link_unit() {
-    n="${2%%.*}"
-    if cmd "$n"; then
-        link ~/.config/systemd/user "$1"
-        systemctl --user enable "$n"
-    fi
-}
-
 cmd() {
     command -v "$1" > /dev/null
 }
@@ -30,25 +22,12 @@ if [ -z "$CHASSIS" ]; then
     exit 1
 fi
 
-mkdir -p ~/.config/systemd/user
-
-if cmd bat; then
-    link_dir ~/.config/bat bat/*
-fi
-
-if cmd picom; then
-    link ~/.config/picom.conf picom.conf
-fi
+mkdir -p ~/.local/bin
 
 if cmd git; then
     link ~/.gitconfig git/gitconfig
     link ~/.gitignore git/gitignore
-    mkdir -p ~/.local/bin
     link ~/.local/bin/git-ship git/git-ship
-fi
-
-if cmd task; then
-    link ~/.taskrc taskrc
 fi
 
 if cmd kitty; then
@@ -70,21 +49,6 @@ if cmd gpg-agent; then
     link ~/.gnupg/gpg-agent.conf gpg-agent.conf
 fi
 
-if cmd rofi; then
-    link_dir ~/.config/rofi rofi/*
-fi
-
-if cmd dovetail; then
-    mkdir -p ~/.config/dovetail
-    link ~/.config/dovetail/config.lua dovetail/config.lua
-    link ~/.config/dovetail/theme.lua dovetail/theme.lua
-    link ~/.config/dovetail/chassis.lua dovetail/"$CHASSIS".lua
-fi
-
-if cmd qutebrowser; then
-    link_dir ~/.config/qutebrowser qutebrowser/*
-fi
-
 if cmd tmux; then
     link ~/.tmux.conf tmux.conf
 fi
@@ -92,23 +56,3 @@ fi
 if cmd mpv; then
     link_dir ~/.config/mpv mpv/*
 fi
-
-if cmd redshift; then
-    link ~/.config/redshift.conf redshift.conf
-fi
-
-if cmd lvim; then
-    link_dir ~/.config/lvim lvim/*
-fi
-
-for u in systemd/user/*; do
-    link_unit "$u" "${u#systemd/user/}"
-done
-
-if [ "$CHASSIS" == 'desktop' ]; then
-    for u in systemd/desktop/*; do
-        link_unit "$u" "${u#systemd/desktop/}"
-    done
-fi
-
-link_unit systemd/user/geoclue-agent.service redshift

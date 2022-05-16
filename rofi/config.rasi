@@ -1,5 +1,0 @@
-configuration {
-	dpi: 158;
-}
-
-@theme "Paper"
