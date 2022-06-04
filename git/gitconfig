@@ -29,5 +29,4 @@
 [pull]
 	rebase = false
 [core]
-	editor = code -w
 	excludesfile = /home/james/.gitignore
