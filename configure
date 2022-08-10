@@ -30,10 +30,6 @@ if cmd git; then
     link ~/.local/bin/git-ship git/git-ship
 fi
 
-if cmd kitty; then
-    link_dir ~/.config/kitty kitty/*
-fi
-
 if cmd ranger; then
     link_dir ~/.config/ranger ranger/*
 fi
