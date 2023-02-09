@@ -52,3 +52,7 @@ fi
 if cmd mpv; then
     link_dir ~/.config/mpv mpv/*
 fi
+
+if cmd clight; then
+    link ~/.config/clight.conf clight.conf
+fi
