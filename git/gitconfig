@@ -30,3 +30,5 @@
 	rebase = false
 [core]
 	excludesfile = /home/james/.gitignore
+[init]
+	defaultBranch = main
