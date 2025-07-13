@@ -1,6 +1,6 @@
 [user]
 	name = James Reed
-	email = james@twiddlingbits.net
+	email = james@jamesreed.dev
 	signingkey = C5E8125E
 [commit]
 	gpgsign = true
